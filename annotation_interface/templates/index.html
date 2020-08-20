@@ -3,13 +3,43 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-  <h1 class="text-center">Simple Flask App</h1>
+  <h1 class="text-center">Annotation Interface</h1>
   <div class="row">
     <div class="col-sm-6 offset-sm-3">
       <div class="jumbotron">
-        Welcome to this simple Flask example app. It shows you how to easily
-        enable users to register, login, and logout of a Flask web app using <a
-           href="https://developer.okta.com">Okta</a>.
+        Hello! Welcome to the annotation interface!
+        <div class="container" style="padding-top: -20px;">
+          <form action="/login_to_dashboard" method="post" novalidate="novalidate">
+            <div class="row" style="padding:10px;">
+                <div class="col-lg-6 offset-lg-2 col-md-9 col-sm-12 p-0" >
+                    <input type="text" class="form-control search-slt" name="auth_key" placeholder="Security Key">
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                    <button class="btn btn-secondary button" type="submit">Submit</button>  
+                </div>
+                <div>
+                  <script type="text/javascript">
+                    if (True){
+                      <h5>Wrong Security key</h5>  
+                    }
+                  </script>
+                  if (True):
+                    <h5>Redundant</h5>
+                </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+          <script>
+            var x = document.createElement("VAR");
+            var t = document.createTextNode("Incorrect security key");
+            x.style.color = "red";
+            x.appendChild(t);
+            // if {{ login_failed }}==1:
+              // document.body.appendChild(x);
+            // <div onload="document.innerHTML("fref")"> 
+        </script>
+        </div>  
       </div>
     </div>
   </div>
