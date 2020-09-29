@@ -2,7 +2,7 @@ import wget
 
 def download_files(urls_file, download_location):
     with open(urls_file, "r") as f:
-        urls = f.read()
+        urls = f.readlines()
     
     counter = 0
     for paper_url in urls:
