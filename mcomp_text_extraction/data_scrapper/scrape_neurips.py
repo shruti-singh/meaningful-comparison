@@ -37,4 +37,4 @@ for yp in yearwise_pages:
 with open("neurips_paper_urls.txt", "w") as f:
     for k in paper_urls:
         for v in paper_urls[k]:
-            f.write(k + v + "\n")
+            f.write(k + v + ".pdf" + "\n")
