@@ -9,7 +9,7 @@ def download_files(urls_file, download_location):
         try:
             if counter % 20 == 0:
                 print("Finished downloading %d" % counter, flush=True)
-            wget.download(paper_url)
+            wget.download(paper_url, download_location)
             counter += 1
         except Exception as ex:
             print("Error for purl: %s" %(paper_url), flush=True)
@@ -17,4 +17,4 @@ def download_files(urls_file, download_location):
     return
 
 if __name__ == "__main__":
-    download_files("neurips_paper_urls.txt", "/home/singh_shruti/data/neurips/")
+    download_files("neurips_paper_urls.txt", "/home/singh_shruti/data/neurips/pdfs/")
