@@ -32,7 +32,7 @@ for yp in yearwise_pages:
     for l in links:
         href_text = l.get("href")
         if href_text.startswith("/paper"):
-            paper_urls[year_url].append(href_text)
+            paper_urls[url[0:-1]].append(href_text)
 
 with open("neurips_paper_urls.txt", "w") as f:
     for k in paper_urls:
